@@ -38,7 +38,7 @@ module.exports = {
 
       //  文件中的入口文件
       if (isDir) {
-        fileObj[`${upperCasetoLine(item)}`] = resolve(join(itemPath, 'index.js'))
+        fileObj[`d-${upperCasetoLine(item)}`] = resolve(join(itemPath, 'index.js'))
       } else if (suffix === 'js') {
         //  文件夹外的入口文件
         fileObj[name] = resolve(`${itemPath}`)
