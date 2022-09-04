@@ -5,8 +5,10 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "@/*": [
-        "examples/*",
+      "@examples": [
+        "examples/*"
+      ],
+      "@packages": [
         "packages/*"
       ]
     },

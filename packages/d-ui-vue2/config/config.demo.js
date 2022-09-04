@@ -1,10 +1,11 @@
 // config.demo.js 
 const path = require('path')
-const defaultSettings = require('../examples/settings')
+// const defaultSettings = require('../examples/settings')
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-const name = defaultSettings.title || '组件库' // page title
+// const name = defaultSettings.title || '组件库' // page title
+const name = '组件库'
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
 
 const demoBuildConfig = {
