@@ -1,6 +1,6 @@
 {
   "name": "d-ui-vue2",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "description": "d-ui,vue2版本",
   "main": "lib/index/index.js",
@@ -11,9 +11,7 @@
     "lint": "vue-cli-service lint",
     "lib:build": "vue-cli-service build  --mode npm"
   },
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",

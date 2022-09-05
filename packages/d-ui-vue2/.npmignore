@@ -3,13 +3,16 @@ examples/
 packages/
 public/
 tests/
+config/
+dist/
+src/
 
 # 忽略指定文件
 vue.config.js
 babel.config.js
-# .browserslistrc
-# .env.demo
-# .env.npm
-# .eslintignore
-# .eslintrc.js
+.browserslistrc
+.env.npm
+.eslintignore
+.eslintrc.js
 jest.config.js
+jsconfig.json
