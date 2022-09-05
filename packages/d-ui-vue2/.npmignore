@@ -2,8 +2,14 @@
 examples/
 packages/
 public/
+tests/
 
 # 忽略指定文件
 vue.config.js
 babel.config.js
-*.map
+# .browserslistrc
+# .env.demo
+# .env.npm
+# .eslintignore
+# .eslintrc.js
+jest.config.js

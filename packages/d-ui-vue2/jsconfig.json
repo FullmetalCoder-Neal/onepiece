@@ -5,11 +5,8 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "@examples": [
-        "examples/*"
-      ],
-      "@packages": [
-        "packages/*"
+      "@/*": [
+        "src/*"
       ]
     },
     "lib": [

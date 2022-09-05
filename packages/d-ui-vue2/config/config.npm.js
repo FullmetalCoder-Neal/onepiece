@@ -20,14 +20,7 @@ const npmBuildConfig = {
       //  依赖名称
       library: 'd-zui-vue2'
     },
-    externals: {
-      vue: {
-        root: 'Vue',
-        commonjs: 'vue',
-        commonjs2: 'vue',
-        amd: 'vue'
-      }
-    },
+    productionSourceMap: false,
   },
   //  样式输出
   css: {
