@@ -20,7 +20,6 @@ const npmBuildConfig = {
       //  依赖名称
       library: 'd-zui-vue2'
     },
-    productionSourceMap: false,
   },
   //  样式输出
   css: {
@@ -37,7 +36,8 @@ const npmBuildConfig = {
     config.plugins.delete('html')
     config.plugins.delete('hmr')
     config.entryPoints.delete('app')
-  }
+  },
+  productionSourceMap: false,
 }
 
 module.exports = npmBuildConfig
