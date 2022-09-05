@@ -1,6 +1,5 @@
 // config.npm.js
 const { resolve, getComponentEntries } = require('./utils')
-const TerserPlugin = require('terser-webpack-plugin')
 
 const npmBuildConfig = {
   // 输出文件目录
@@ -29,17 +28,6 @@ const npmBuildConfig = {
         amd: 'vue'
       }
     },
-    optimization: {
-      minimizer: [ // 定制压缩选项
-        new TerserPlugin({
-          terserOptions: {
-            output: {
-              comments: false // 去掉注释
-            }
-          }
-        })
-      ]
-    }
   },
   //  样式输出
   css: {
