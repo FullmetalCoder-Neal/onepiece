@@ -6,8 +6,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import '@/icons' // icon
-import '@/permission' // permission control
+// TODO
+// import '@/icons' // icon
+// import '@/permission' // permission control
 
 /**
  * If you don't want to use mock-server
@@ -17,10 +18,10 @@ import '@/permission' // permission control
  * Currently MockJs will be used in the production environment,
  * please remove it before going online ! ! !
  */
-if (process.env.NODE_ENV === 'production') {
-  const { mockXHR } = require('../mock')
-  mockXHR()
-}
+// if (process.env.NODE_ENV === 'production') {
+//   const { mockXHR } = require('../mock')
+//   mockXHR()
+// }
 
 Vue.config.productionTip = false
 
