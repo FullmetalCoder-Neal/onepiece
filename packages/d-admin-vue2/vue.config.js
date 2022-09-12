@@ -19,22 +19,26 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     port: port,
-    // FIXME
-    // open: true,
-    // FIXME
-    // overlay: {
-    //   warnings: false,
-    //   errors: true
-    // },
+    open: true,
+    host: 'localhost',
     /**
+     * webpack4
      * @description: 提供了一个在 devServer 内部的 所有中间件执行之前的自定义执行函数
      * @param {*} app: express对象
      * @param {*} server: webpack-dev-server
-     * @param {*} app: webpack编译器
+     * @param {*} compiler: webpack编译器
      * @return {*}
      */
     // before: (app, server, compiler) => {}
-    // FIXME before: require('./mock/mock-server.js')
+    /**
+     * webpack5
+     * @description: 提供执行自定义函数和应用自定义中间件的能力
+     * @param {*} middlewares: 中间件列表
+     * @param {*} devServer: devServer.app: express对象
+     * @return {*} 
+     */      
+    // setupMiddlewares: (middlewares, devServer) => {}
+    setupMiddlewares: require('./mock/mock-server.js')
     // proxy: {
     //   '/dev-api': {
     //     target: '',
@@ -58,7 +62,7 @@ module.exports = {
   },
   chainWebpack(config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload
-    // FIXME vue-cli not support preload for now
+    // FIXME vue-cli not support preload for now with upgrading to webpack5
     // config.plugin('preload').tap(() => [
     //   {
     //     rel: 'preload',
@@ -70,7 +74,7 @@ module.exports = {
     // ])
 
     // when there are many pages, it will cause too many meaningless requests
-    config.plugins.delete('prefetch')
+    // config.plugins.delete('prefetch')
 
     // set svg-sprite-loader
     config.module

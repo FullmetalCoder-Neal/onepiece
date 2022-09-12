@@ -43,7 +43,7 @@ const responseFake = (url, type, respond) => {
   }
 }
 
-module.exports = app => {
+const mockServer = app => {
   // parse app.body
   // https://expressjs.com/en/4x/api.html#req.body
   app.use(bodyParser.json())
@@ -78,4 +78,14 @@ module.exports = app => {
       }
     }
   })
+}
+
+module.exports = (middlewares, devServer) => {
+  if (!devServer) {
+    throw new Error('webpack-dev-server is not defined');
+  }
+
+  mockServer(devServer.app)
+
+  return middlewares;
 }
